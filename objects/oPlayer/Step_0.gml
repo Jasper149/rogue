@@ -1,8 +1,29 @@
 // @description Insert description here
 // You can write your code in this editor
-key_left=keyboard_check(vk_left);
-key_right=keyboard_check(vk_right);
-key_jump=keyboard_check_pressed(vk_up);
+key_left=keyboard_check(ord("A"));
+key_right=keyboard_check(ord("D"));
+key_jump=keyboard_check_pressed(ord("W"));
+key_sprint=keyboard_check(vk_shift)
+
+if (key_sprint=1)
+{
+	walksp=8;
+}
+else
+{
+	walksp=4;
+}
+
+//timer
+if (invic = true)
+{
+	invTimer -= 1/room_speed
+	if (invTimer <=0)
+	{
+		invic = false;
+		invTimer = 2;
+	}
+}
 
 
 var move = key_right-key_left;
@@ -12,9 +33,15 @@ hsp=move*walksp
 vsp=vsp+grv;
 if (place_meeting(x,y+1,oWall)) and (key_jump)
 {
+{
 vsp=-7;
-
 }
+if (y<0) and (key_jump)
+
+vsp=-7
+}
+
+
 //horizontal collision
 if (place_meeting(x+hsp,y,oWall))
 {
