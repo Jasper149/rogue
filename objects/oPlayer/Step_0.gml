@@ -33,12 +33,7 @@ hsp=move*walksp
 vsp=vsp+grv;
 if (place_meeting(x,y+1,oWall)) and (key_jump)
 {
-{
 vsp=-7;
-}
-if (y<0) and (key_jump)
-
-vsp=-7
 }
 
 
