@@ -8,3 +8,4 @@ invic= false;
 invTimer = 2;
 hp=3;
 jumpForce = -2;
+global.potion=3;

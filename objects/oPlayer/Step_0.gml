@@ -4,14 +4,25 @@ key_left=keyboard_check(ord("A"));
 key_right=keyboard_check(ord("D"));
 key_jump=keyboard_check_pressed(ord("W"));
 key_sprint=keyboard_check(vk_shift)
+key_potion=keyboard_check_pressed(ord("Q"))
 
+//potions
+if(key_potion=1) and hp<3 and global.potion>0
+{
+	global.potion=global.potion-1
+	hp=(hp+1)
+}
+
+//sprinting
 if (key_sprint=1)
 {
 	walksp=8;
+
 }
 else
 {
 	walksp=4;
+	
 }
 
 //timer
@@ -25,16 +36,17 @@ if (invic = true)
 	}
 }
 
-
+//direction
 var move = key_right-key_left;
 
 hsp=move*walksp
 
 vsp=vsp+grv;
-if (place_meeting(x,y+1,oWall)) and (key_jump)
+if (place_meeting(x,y+1,oWall)) and (key_jump) 
 {
 vsp=-7;
 }
+
 
 
 //horizontal collision
