@@ -5,6 +5,9 @@ key_right=keyboard_check(ord("D"));
 key_jump=keyboard_check_pressed(ord("W"));
 key_sprint=keyboard_check(vk_shift)
 key_potion=keyboard_check_pressed(ord("Q"))
+key_bullet=keyboard_check(ord("E"))
+
+
 
 //potions
 if(key_potion=1) and hp<3 and global.potion>0
@@ -37,7 +40,7 @@ if (invic = true)
 }
 
 //direction
-var move = key_right-key_left;
+move = key_right-key_left;
 
 hsp=move*walksp
 
@@ -71,3 +74,15 @@ if (place_meeting(x,y+vsp,oWall))
 }
 y=y+vsp; 
 
+//projectile
+shotTimer -=1/room_speed;
+if (shotTimer < 0) and key_bullet=1
+{
+	shotTimer=3;
+	var bullet = instance_create_layer(x,y,"Instances", oPlayerProjectile)
+	with (bullet)
+	{
+		speed = 3
+		direction =point_direction(x,y, mouse_x, mouse_y);
+	}
+}

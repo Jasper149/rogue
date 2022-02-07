@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"69126707-a71d-40ce-9bf6-f060a942a70a","path":"sprites/Sprite6/Sprite6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"69126707-a71d-40ce-9bf6-f060a942a70a","path":"sprites/Sprite6/Sprite6.yy",},"LayerId":{"name":"58de165d-b02f-492c-b65b-1bbbce68a9bf","path":"sprites/Sprite6/Sprite6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},"resourceVersion":"1.0","name":"69126707-a71d-40ce-9bf6-f060a942a70a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"948b6dcb-5b62-4cc4-bbec-2f3bed63b747","path":"sprites/Sprite10/Sprite10.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"948b6dcb-5b62-4cc4-bbec-2f3bed63b747","path":"sprites/Sprite10/Sprite10.yy",},"LayerId":{"name":"90019d69-dcec-4587-8ec7-20cb8a67868b","path":"sprites/Sprite10/Sprite10.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"resourceVersion":"1.0","name":"948b6dcb-5b62-4cc4-bbec-2f3bed63b747","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},
+    "spriteId": {"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,10 +41,10 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8f95ccdc-3fdd-4ed7-b0d4-5e7930659e90","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"69126707-a71d-40ce-9bf6-f060a942a70a","path":"sprites/Sprite6/Sprite6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e01ed53a-5593-4800-9498-df4f1745acd9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"948b6dcb-5b62-4cc4-bbec-2f3bed63b747","path":"sprites/Sprite10/Sprite10.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": null,
+    "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},
+    "parent": {"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},
     "resourceVersion": "1.3",
-    "name": "Sprite6",
+    "name": "Sprite10",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"58de165d-b02f-492c-b65b-1bbbce68a9bf","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"90019d69-dcec-4587-8ec7-20cb8a67868b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "rogue",
+    "path": "rogue.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "Sprite6",
+  "name": "Sprite10",
   "tags": [],
   "resourceType": "GMSprite",
 }

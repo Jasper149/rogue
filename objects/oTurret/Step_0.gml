@@ -12,3 +12,12 @@ if (shotTimer < 0)
 		direction =point_direction(x,y, oPlayer.x, oPlayer.y);
 	}
 }
+if (invic)
+{
+	invTimer-= 1/room_speed;
+	if(invTimer <0)
+{
+	invTimer=0.5
+	invic=false;
+}
+}

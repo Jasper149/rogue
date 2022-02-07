@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-hp=3;
-shotTimer=3;
 invic=false;
+hp=3
+invTimer =0.5;
+xDirection =1
+walksp =2;
+turnTimer=2.5
