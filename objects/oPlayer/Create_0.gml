@@ -10,3 +10,5 @@ hp=3;
 jumpForce = -2;
 global.potion=3;
 shotTimer=0;
+jump_number=2
+jump_current=0

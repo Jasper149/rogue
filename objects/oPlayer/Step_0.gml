@@ -6,6 +6,12 @@ key_jump=keyboard_check_pressed(ord("W"));
 key_sprint=keyboard_check(vk_shift)
 key_potion=keyboard_check_pressed(ord("Q"))
 key_bullet=keyboard_check(ord("E"))
+key_lookup=keyboard_check(vk_control)
+
+
+
+
+
 
 
 
@@ -48,7 +54,15 @@ vsp=vsp+grv;
 if (place_meeting(x,y+1,oWall)) and (key_jump) 
 {
 vsp=-7;
+jump_number=jump_number+1	
 }
+else
+if(key_jump) and jump_current>0
+{
+	vsp=vsp-8
+	jump_current=jump_number
+}
+
 
 
 
@@ -71,6 +85,7 @@ if (place_meeting(x,y+vsp,oWall))
 	y=y+sign(vsp);
 	}
 	vsp=0;
+	jump_number=jump_number+2
 }
 y=y+vsp; 
 
@@ -82,7 +97,7 @@ if (shotTimer < 0) and key_bullet=1
 	var bullet = instance_create_layer(x,y,"Instances", oPlayerProjectile)
 	with (bullet)
 	{
-		speed = 3
+		speed = 6
 		direction =point_direction(x,y, mouse_x, mouse_y);
 	}
 }
