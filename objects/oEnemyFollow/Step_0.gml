@@ -12,6 +12,15 @@ if (invic)
 
 xDirection = sign(oPlayer.x-x)
 hsp=walksp*xDirection
+ 
+ if (place_meeting(x+hsp,y,oEnemyFollow))
+{
+	while (!place_meeting(x+sign(hsp),y,oEnemyFollow))
+	{
+	x=x+sign(hsp);
+	}
+	hsp=0;
+}
 
 if (abs(oPlayer.x-x) <500)
    { 
@@ -29,3 +38,7 @@ if (abs(oPlayer.x-x) <500)
 	vsp=0;
 }
  y=y+vsp
+ 
+
+
+ 

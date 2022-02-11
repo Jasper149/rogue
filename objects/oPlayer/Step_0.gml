@@ -41,7 +41,7 @@ if (invic = true)
 	if (invTimer <=0)
 	{
 		invic = false;
-		invTimer = 2;
+		invTimer = 1;
 	}
 }
 
@@ -51,18 +51,12 @@ move = key_right-key_left;
 hsp=move*walksp
 
 vsp=vsp+grv;
-if (place_meeting(x,y+1,oWall)) and (key_jump) 
-{
-vsp=-7;
-jump_number=jump_number+1	
-}
-else
-if(key_jump) and jump_current>0
-{
-	vsp=vsp-8
-	jump_current=jump_number
-}
 
+if (key_jump) and jump_current>0
+{
+vsp=-8;
+jump_current--;
+}
 
 
 
@@ -85,7 +79,7 @@ if (place_meeting(x,y+vsp,oWall))
 	y=y+sign(vsp);
 	}
 	vsp=0;
-	jump_number=jump_number+2
+	jump_current=jump_number
 }
 y=y+vsp; 
 

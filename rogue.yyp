@@ -17,6 +17,7 @@
     {"id":{"name":"spotion","path":"sprites/spotion/spotion.yy",},"order":7,},
     {"id":{"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},"order":0,},
     {"id":{"name":"sItem","path":"sprites/sItem/sItem.yy",},"order":5,},
+    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":1,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"EnemyHurt1","path":"scripts/EnemyHurt1/EnemyHurt1.yy",},"order":0,},
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":14,},
@@ -40,6 +41,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"","path":"",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
