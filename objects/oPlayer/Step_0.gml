@@ -11,10 +11,6 @@ key_lookup=keyboard_check(vk_control)
 
 
 
-
-
-
-
 //potions
 if(key_potion=1) and hp<3 and global.potion>0
 {
@@ -59,7 +55,6 @@ jump_current--;
 }
 
 
-
 //horizontal collision
 if (place_meeting(x+hsp,y,oWall))
 {
@@ -95,3 +90,4 @@ if (shotTimer < 0) and key_bullet=1
 		direction =point_direction(x,y, mouse_x, mouse_y);
 	}
 }
+
