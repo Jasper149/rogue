@@ -91,3 +91,11 @@ if (shotTimer < 0) and key_bullet=1
 	}
 }
 
+if shotTimer>0
+{
+	timer=3
+}
+if timer!=-1
+{
+	timer--;
+}
