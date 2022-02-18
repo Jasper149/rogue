@@ -8,3 +8,4 @@ walksp =4;
 turnTimer=2.5
 grv=0.15
 vsp=0
+jumpForce = -2;

@@ -13,3 +13,4 @@ shotTimer=0;
 jump_number=2
 jump_current=0
 timer=-1
+parry_timer=-1

@@ -6,8 +6,8 @@ key_jump=keyboard_check_pressed(ord("W"));
 key_sprint=keyboard_check(vk_shift)
 key_potion=keyboard_check_pressed(ord("Q"))
 key_bullet=keyboard_check(ord("E"))
-key_lookup=keyboard_check(vk_control)
-
+key_lookup=keyboard_check(vk_up)
+key_parry=keyboard_check_pressed(vk_control)
 
 
 
@@ -16,6 +16,8 @@ if(key_potion=1) and hp<3 and global.potion>0
 {
 	global.potion=global.potion-1
 	hp=(hp+1)
+	walksp=0
+	potion_timer=-2/room_speed
 }
 
 //sprinting
@@ -99,3 +101,17 @@ if timer!=-1
 {
 	timer--;
 }
+
+if(y>=room_height)
+{
+	room_goto_next()
+}
+
+if (key_parry=1) 
+{
+	invic=true
+}
+
+
+
+

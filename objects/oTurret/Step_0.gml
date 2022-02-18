@@ -2,7 +2,7 @@
 // You can write your code in this editor
 shotTimer -=1/room_speed;
 
-if (shotTimer < 0)
+if (shotTimer < 0) and (abs(oPlayer.x-x) <500)
 {
 	shotTimer=3;
 	var bullet = instance_create_layer(x,y,"Instances", oProjectile)
