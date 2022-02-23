@@ -20,17 +20,8 @@ if(key_potion=1) and hp<3 and global.potion>0
 	potion_timer=-2/room_speed
 }
 
-//sprinting
-if (key_sprint=1)
-{
-	walksp=8;
 
-}
-else
-{
-	walksp=4;
-	
-}
+
 
 //timer
 if (invic = true)
@@ -49,6 +40,7 @@ move = key_right-key_left;
 hsp=move*walksp
 
 vsp=vsp+grv;
+hsp_sprint=hsp*2
 
 if (key_jump) and jump_current>0
 {
@@ -57,16 +49,35 @@ jump_current--;
 }
 
 
+
+
+
+
 //horizontal collision
-if (place_meeting(x+hsp,y,oWall))
+if (place_meeting(x+hsp,y,oWall)) 
 {
-	while (!place_meeting(x+sign(hsp),y,oWall))
+	while (!place_meeting(x+sign(hsp),y,oWall)) 
 	{
 	x=x+sign(hsp);
 	}
 	hsp=0;
+	hsp_sprint=0;
 }
+
+//sprinting
+if (key_sprint=1)
+{
+hsp=hsp_sprint
+
+}
+else
+{
+	hsp=hsp
+	
+}
+
 x=x+hsp; 
+
 
 //verticle collision
 if (place_meeting(x,y+vsp,oWall))
@@ -104,7 +115,8 @@ if timer!=-1
 
 if(y>=room_height)
 {
-	room_goto_next()
+target=asset_get_index("R"+string(irandom_range(1,5)));
+room_goto(target)
 }
 
 if (key_parry=1) 
