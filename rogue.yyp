@@ -23,9 +23,10 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"EnemyHurt1","path":"scripts/EnemyHurt1/EnemyHurt1.yy",},"order":0,},
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":14,},
-    {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},"order":8,},
+    {"id":{"name":"sMelee","path":"sprites/sMelee/sMelee.yy",},"order":8,},
     {"id":{"name":"R2","path":"rooms/R2/R2.yy",},"order":3,},
     {"id":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"order":6,},
+    {"id":{"name":"oMelee","path":"objects/oMelee/oMelee.yy",},"order":9,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":1,},
   ],
   "Options": [

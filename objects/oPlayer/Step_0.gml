@@ -8,7 +8,7 @@ key_potion=keyboard_check_pressed(ord("Q"))
 key_bullet=keyboard_check(ord("E"))
 key_lookup=keyboard_check(vk_up)
 key_parry=keyboard_check_pressed(vk_control)
-
+key_melee=keyboard_check_pressed(vk_tab)
 
 
 //potions
@@ -39,18 +39,16 @@ move = key_right-key_left;
 
 hsp=move*walksp
 
-vsp=vsp+grv;
+
 hsp_sprint=hsp*2
+vsp=vsp+grv;
+
 
 if (key_jump) and jump_current>0
 {
 vsp=-8;
 jump_current--;
 }
-
-
-
-
 
 
 //horizontal collision
