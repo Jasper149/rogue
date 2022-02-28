@@ -28,6 +28,27 @@ function EnemyHurtProjectile()
 	}
 }
 
+
+
+function EnemyHurtMelee()
+
+{
+	if (!other.invic )
+	{
+		invic=true;
+	other.hp--;
+	if (other.hp<3)
+	{
+		EnemyDeath();
+	}
+	}
+}
+
+
+
+
+
+
 function EnemyDeath()
 {
 	instance_destroy(other)

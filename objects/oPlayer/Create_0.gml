@@ -16,3 +16,10 @@ timer=-1
 parry_timer=-1
 knockback=0
 knockback_distance=0
+enum states {
+	walking,
+	sprinting,
+	jumping,
+}
+
+state=states.walking
