@@ -12,10 +12,7 @@ vsp=-8;
 jump_current--;
 }
 if(place_meeting(x,y+1,oWall))
-state=states.walking
-
-
-
-
-
+{
+state=states.walking;
+}
 }

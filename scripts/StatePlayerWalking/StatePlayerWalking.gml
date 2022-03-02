@@ -1,14 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+hsp=0
 function StatePlayerWalking(){
 
 CheckCollisionsx()
 CheckCollisiony()
 
-
-move = key_right-key_left;
-
-hsp=move*walksp
 }
 
 function StatePlayersprinting(){
@@ -28,7 +25,13 @@ else
 	hsp=hsp
 	
 }
-if (key_jump) and jump_current>0
+if (place_meeting(x,y+1,oWall) (key_jump) and (jump_current>0))
+{
 state=states.jumping
 }
+}
+
+
+if (hsp=8)
+state=states.sprinting
 

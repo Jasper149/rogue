@@ -2,7 +2,7 @@
 // You can write your code in this editor
 hsp =0;
 vsp =0;
-grv =0.15;
+grv =0.17;
 walksp = 4;
 invic= false;
 invTimer = 1;
