@@ -13,5 +13,5 @@ function PlayerHurt()
 }
 function PlayerDeath()
 {
-room_restart();
+room_goto(R1)
 }

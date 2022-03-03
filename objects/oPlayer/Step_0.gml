@@ -1,6 +1,9 @@
 // @description Insert description here
 // You can write your code in this editor
 CheckInput()
+CheckCollisionsx()
+CheckCollisiony()
+vsp=vsp+grv;
 
 if(state == states.walking){
 	StatePlayerWalking()
@@ -16,34 +19,8 @@ else if(state == states.jumping){
 
 
 
-//horizontal collision
-if (place_meeting(x+hsp,y,oWall)) 
-{
-	while (!place_meeting(x+sign(hsp),y,oWall)) 
-	{
-	x=x+sign(hsp);
-	}
-	hsp=0;
-	hsp_sprint=0;
-}
-
-
-
-x=x+hsp; 
-
-
-//verticle collision
-if (place_meeting(x,y+vsp,oWall))
-{
-	while (!place_meeting(x,y+sign(vsp),oWall))
-	{
-	y=y+sign(vsp);
-	}
-	vsp=0;
-	jump_current=jump_number
-}
-y=y+vsp; 
-vsp=vsp+grv;
+y=y+vsp;
+x=x+hsp
 
 //projectile
 shotTimer -=1/room_speed;
@@ -93,7 +70,6 @@ if(key_potion=1) and hp<3 and global.potion>0
 {
 	global.potion=global.potion-1
 	hp=(hp+1)
-	walksp=0
 	potion_timer=-2/room_speed
 }
 
