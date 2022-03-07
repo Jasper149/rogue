@@ -6,8 +6,10 @@ grv =0.17;
 walksp = 4;
 invic= false;
 invTimer = 1;
-hp=3;
+oPlayer.hp=3;
 jumpForce = -2;
+potion_active=0
+potion_timer=-1
 global.potion=3;
 shotTimer=0;
 jump_number=2
@@ -20,6 +22,9 @@ enum states {
 	walking,
 	sprinting,
 	jumping,
+	potion,
+	idle,
 }
 
-state=states.walking
+state=states.idle
+

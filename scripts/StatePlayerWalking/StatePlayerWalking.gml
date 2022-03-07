@@ -11,14 +11,18 @@ function StatePlayersprinting(){
 	CheckCollisionsx()
 	CheckCollisiony()
 	
-
+}
 if (place_meeting(x,y+1,oWall) and (key_jump) and (jump_current>0))
 {
 state=states.jumping
 }
 if (hsp=8)
+{
 state=states.sprinting
-
+}
+if (potion_active)
+{
+state=states.potion
 }
 
 

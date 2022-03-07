@@ -50,5 +50,15 @@ if (place_meeting(x,y+vsp,oWall))
 	jump_current=jump_number
 	vsp=0;
 }
+function CheckPotion(){
+	potion_active=0
+	if(potion_active) and oPlayer.hp<3 and global.potion>0 
+{
+	global.potion=global.potion-1
+	oPlayer.hp=(oPlayer.hp+1)
+	potion_timer=-2/room_speed
+}
+}
+
 }
 }

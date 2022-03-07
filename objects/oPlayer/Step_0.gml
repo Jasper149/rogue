@@ -5,10 +5,12 @@ CheckCollisionsx()
 CheckCollisiony()
 vsp=vsp+grv;
 
-if(state == states.walking){
+if(state==states.idle){
+	StatePlayerIdel()
+}
+else if(state == states.walking){
 	StatePlayerWalking()
 }
-
 else if(state == states.sprinting){
 	StatePlayersprinting()
 }
@@ -17,7 +19,14 @@ else if(state == states.jumping){
 	StatePlayerJumping()
 }
 
+else if(state == states.potion){
+	StatePlayerPotion()
+}
 
+if(key_potion)
+{
+	potion_active=1
+}
 
 y=y+vsp;
 x=x+hsp
@@ -63,18 +72,6 @@ if (key_melee=1)
 {
 instance_create_layer(x+move*100,y,"Instances", oMelee)
 }
-
-
-//potions
-if(key_potion=1) and hp<3 and global.potion>0
-{
-	global.potion=global.potion-1
-	hp=(hp+1)
-	potion_timer=-2/room_speed
-}
-
-
-
 
 //timer
 if (invic = true)
