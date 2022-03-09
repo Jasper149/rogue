@@ -23,9 +23,13 @@ else if(state == states.potion){
 	StatePlayerPotion()
 }
 
-if(key_potion)
+if (key_potion)
 {
 	potion_active=1
+}
+else
+{
+	potion_active=0
 }
 
 y=y+vsp;

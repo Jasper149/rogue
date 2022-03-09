@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function CheckCollisionsx(){
+
+
 move = key_right-key_left;
 
 hsp=move*walksp
@@ -30,7 +32,7 @@ else
 	hsp=hsp
 	
 }
-
+}
 function CheckCollisiony(){
 
 
@@ -50,15 +52,22 @@ if (place_meeting(x,y+vsp,oWall))
 	jump_current=jump_number
 	vsp=0;
 }
-function CheckPotion(){
-	potion_active=0
-	if(potion_active) and oPlayer.hp<3 and global.potion>0 
-{
-	global.potion=global.potion-1
-	oPlayer.hp=(oPlayer.hp+1)
-	potion_timer=-2/room_speed
-}
 }
 
+function CheckPotion(){
+	
+	CheckInput()
+if (potion_active) and oPlayer.hp<3 and (global.potion>0)
+{
+	potion_timer-=1/room_speed
+	oPlayer.hp=oPlayer.hp+1
+	walksp=0
+	global.potion--;
+	potion_timer=-2
 }
+else
+{
+	walksp=4
+}
+
 }

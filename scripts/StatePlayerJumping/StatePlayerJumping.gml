@@ -4,13 +4,13 @@ function StatePlayerJumping(){
 
 CheckCollisionsx()
 CheckCollisiony()
-
+CheckInput()
 
 if(place_meeting(x,y+1,oWall))
 {
 state=states.walking;
 }
-if (key_potion)
+if (potion_active)
 {
 state=states.potion
 }
