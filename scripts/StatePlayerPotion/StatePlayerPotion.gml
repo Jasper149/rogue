@@ -3,13 +3,10 @@
 function StatePlayerPotion(){
 CheckCollisionsx()
 CheckCollisiony()
-CheckPotion()
 
 
-
-
-if (walksp=4)
+if (walksp=4) or (walksp=8)
 {
-	state=states.walking
+state=states.walking
 }
 }

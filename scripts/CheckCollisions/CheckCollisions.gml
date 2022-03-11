@@ -54,20 +54,4 @@ if (place_meeting(x,y+vsp,oWall))
 }
 }
 
-function CheckPotion(){
-	
-	CheckInput()
-if (potion_active) and oPlayer.hp<3 and (global.potion>0)
-{
-	potion_timer-=1/room_speed
-	oPlayer.hp=oPlayer.hp+1
-	walksp=0
-	global.potion--;
-	potion_timer=-2
-}
-else
-{
-	walksp=4
-}
 
-}

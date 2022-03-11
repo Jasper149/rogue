@@ -12,7 +12,7 @@ if (invic)
 
 xDirection = sign(oPlayer.x-x)
 hsp=walksp*xDirection
- 
+ 	vsp=vsp+grv;
 
  
  //horizontal collision
@@ -35,13 +35,8 @@ while (!place_meeting(x+sign(hsp),y,oEnemyFollow))
 	hsp=0;
 }
 
-if (abs(oPlayer.x-x) <500)
-   { 
-	x=x+hsp
-   }
-    
+
 	
-	vsp=vsp+grv;
  if (place_meeting(x,y+vsp,oWall))
 {
 	while (!place_meeting(x,y+sign(vsp),oWall))
@@ -52,6 +47,9 @@ if (abs(oPlayer.x-x) <500)
 }
  y=y+vsp
   
-
+if (abs(oPlayer.x-x) <500)
+   { 
+	x=x+hsp
+   }
 
  
