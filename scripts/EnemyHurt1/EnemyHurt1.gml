@@ -45,7 +45,19 @@ function EnemyHurtMelee()
 }
 
 
+function BossEnemyHurtProjectile()
 
+{
+	if (!other.boss_invic)
+	{
+		boss_invic=true;
+	other.boss_hp--;
+	if (other.boss_hp<1)
+	{
+		EnemyDeath();
+	}
+	}
+}
 
 
 

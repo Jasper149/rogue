@@ -23,14 +23,6 @@ else if(state == states.potion){
 	StatePlayerPotion()
 }
 
-if (key_potion)
-{
-	potion_active=1
-}
-else
-{
-	potion_active=0
-}
 
 y=y+vsp;
 x=x+hsp
@@ -90,7 +82,7 @@ if (invic = true)
 
 
 potion_timer-=1/room_speed
-if (potion_active) and oPlayer.hp<3 and (global.potion>0)
+if (key_potion) and oPlayer.hp<3 and (global.potion>0)
 {
 	oPlayer.hp=oPlayer.hp+1
 	walksp=1.5

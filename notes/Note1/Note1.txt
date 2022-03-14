@@ -1,0 +1,50 @@
+//create event
+jump_timer=1
+hp=100
+attack damage 2
+
+
+//step event
+
+if (place_meeting(x+hsp,y,oWall))
+{
+	while (!place_meeting(x+sign(hsp),y,oWall))
+	{
+	x=x+sign(hsp);
+	}
+	hsp=0;
+}
+ 
+ 
+ if (place_meeting(x+hsp,y,oEnemyFollow)) 
+{
+while (!place_meeting(x+sign(hsp),y,oEnemyFollow))
+	{
+	x=x+sign(hsp);
+	}
+	hsp=0;
+}
+
+
+	
+ if (place_meeting(x,y+vsp,oWall))
+{
+	while (!place_meeting(x,y+sign(vsp),oWall))
+	{
+	y=y+sign(vsp);
+	}
+	vsp=0;
+}
+ y=y+vsp
+
+xDirection = sign(oPlayer.x-x)
+hsp=walksp*xDirection
+
+jump_timer-=1/room_speed
+
+if (abs(oPlayer.x-x) <500) and (jump_timer=1)
+   { 
+	x=x+hsp
+	y=y+10
+	jump_timer=irandom_range(1,3)
+  }

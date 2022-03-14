@@ -16,7 +16,7 @@ if (hsp=8)
 {
 state=states.sprinting
 }
-if (potion_active)
+if (key_potion)
 {
 state=states.potion
 }
@@ -38,7 +38,7 @@ if (hsp=8)
 {
 state=states.sprinting
 }
-if (potion_active)
+if (key_potion)
 {
 state=states.potion
 }

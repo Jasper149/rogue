@@ -8,7 +8,6 @@ invic= false;
 invTimer = 1;
 oPlayer.hp=3;
 jumpForce = -2;
-potion_active=0
 potion_timer=2
 global.potion=3;
 shotTimer=0;

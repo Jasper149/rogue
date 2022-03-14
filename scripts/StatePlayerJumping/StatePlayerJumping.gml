@@ -10,7 +10,7 @@ if(place_meeting(x,y+1,oWall))
 {
 state=states.walking;
 }
-if (potion_active)
+if (key_potion)
 {
 state=states.potion
 }
