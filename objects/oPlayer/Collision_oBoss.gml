@@ -2,7 +2,7 @@
 // You can write your code in this editor
 	knockback_distance=walksp*60
 	PlayerHurt();
-	if(y<=other.y - other.sprite_height*0.9)
+	if(y<=other.y - other.sprite_height*0.7)
 
 {
 	vsp = jumpForce*2
@@ -16,13 +16,10 @@ while(!place_meeting(x+knockback_distance,y,oWall))
 }
  knockback=1
 }
+
  
- if(place_meeting(x-sign(walksp),y,oEnemyFollow))and(knockback=0)
+ if(place_meeting(x-sign(walksp),y,oBoss))and(knockback=0)
 x+=knockback_distance
-if(place_meeting(x+sign(walksp),y,oEnemyFollow))and(knockback=0)
+if(place_meeting(x+sign(walksp),y,oBoss))and(knockback=0)
 	x-=knockback_distance
-
-
-
-
 

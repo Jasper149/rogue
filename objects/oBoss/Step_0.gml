@@ -14,8 +14,8 @@ if (boss_invic)
 
 xDirection = sign(oPlayer.x-x)
 hsp=walksp*xDirection
+ 	vsp=potential_vsp+grv;
 
-jump_timer-=1/room_speed
 
 
 if (place_meeting(x+hsp,y,oWall))
@@ -47,13 +47,16 @@ while (!place_meeting(x+sign(hsp),y,oEnemyFollow))
 	}
 	vsp=0;
 }
- y=y+vsp
 
 
-
-if (abs(oPlayer.x-x) <500) and (jump_timer=1)
+   jump_timer-=1/room_speed
+if (abs(oPlayer.x-x) <500) and (jump_timer<=1)
    { 
-	x=x+hsp
-	y=y+10
-	jump_timer=irandom_range(1,3)
+	y=y+vsp
+	jump_timer=2
   }
+  
+ if (abs(oPlayer.x-x) <500)
+ {
+	 x=x+hsp
+ }

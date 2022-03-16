@@ -4,7 +4,10 @@
 jump_timer=1
 boss_hp=100
 walksp=4
-vsp=0
+potential_vsp=-8
 hsp=0
 boss_invic=false
 boss_invTimer=0.5
+grv=0.12
+jumpForce = -2;
+jump=true
