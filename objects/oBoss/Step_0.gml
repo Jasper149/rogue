@@ -12,9 +12,9 @@ if (boss_invic)
 }
 
 
-xDirection = sign(oPlayer.x-x)
-hsp=walksp*xDirection
- 	vsp=potential_vsp+grv;
+global.oBoss_xDirection = sign(oPlayer.x-x)
+hsp=walksp*global.oBoss_xDirection
+ 	vsp=vsp+grv;
 
 
 
@@ -38,8 +38,7 @@ while (!place_meeting(x+sign(hsp),y,oEnemyFollow))
 }
 
 
-	
- if (place_meeting(x,y+vsp,oWall))
+if (place_meeting(x,y+vsp,oWall))
 {
 	while (!place_meeting(x,y+sign(vsp),oWall))
 	{
@@ -47,12 +46,14 @@ while (!place_meeting(x+sign(hsp),y,oEnemyFollow))
 	}
 	vsp=0;
 }
+y=y+vsp
 
+ 
+jump_timer-=1/room_speed
+if (abs(oPlayer.x-x) <500) and (jump_timer<=1) and (place_meeting(x,y+1,oWall))
 
-   jump_timer-=1/room_speed
-if (abs(oPlayer.x-x) <500) and (jump_timer<=1)
    { 
-	y=y+vsp
+	vsp=-8
 	jump_timer=2
   }
   
