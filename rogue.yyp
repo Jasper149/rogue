@@ -34,6 +34,7 @@
     {"id":{"name":"R2","path":"rooms/R2/R2.yy",},"order":3,},
     {"id":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"order":6,},
     {"id":{"name":"oMelee","path":"objects/oMelee/oMelee.yy",},"order":9,},
+    {"id":{"name":"StateEnemyCollision","path":"scripts/StateEnemyCollision/StateEnemyCollision.yy",},"order":8,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":1,},
   ],
   "Options": [

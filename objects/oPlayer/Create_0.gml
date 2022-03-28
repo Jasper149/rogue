@@ -14,8 +14,14 @@ shotTimer=0;
 jump_number=2
 jump_current=0
 timer=-1
-parry_timer=-1
-knockback=0
+
+td=ds_list_create(); //list that stores data
+td_rewind=0; //how much to rewind
+max_seconds=3; //Max time you can rewind
+rewind=false //the activation
+rewindtimer=1
+
+
 knockback_distance=0
 enum states {
 	walking,

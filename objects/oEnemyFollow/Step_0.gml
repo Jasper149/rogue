@@ -36,6 +36,15 @@ while (!place_meeting(x+sign(hsp),y,oEnemyFollow))
 }
 
 
+if (place_meeting(x+hsp,y,oPlayer)) 
+{
+	while (!place_meeting(x+sign(hsp),y,oPlayer)) 
+	{
+	x=x+sign(hsp);
+	}
+	hsp=0
+}
+
 	
  if (place_meeting(x,y+vsp,oWall))
 {

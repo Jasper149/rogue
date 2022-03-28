@@ -3,12 +3,14 @@
 
 function CheckCollisionsx(){
 
-
+if (!rewind)
+{
 move = key_right-key_left;
 
 hsp=move*walksp
 
 	hsp_sprint=hsp*2
+}
 
 //horizontal collision
 if (place_meeting(x+hsp,y,oWall)) 
@@ -20,6 +22,19 @@ if (place_meeting(x+hsp,y,oWall))
 	hsp=0;
 	hsp_sprint=0;
 }
+
+//Enemy collision
+if (place_meeting(x+hsp,y,oEnemyFollow)) 
+{
+	while (!place_meeting(x+sign(hsp),y,oEnemyFollow)) 
+	{
+	x=x+sign(hsp);
+	}
+	rewind=true
+PlayerHurt()
+}
+
+
 
 
 if (key_sprint=1)
@@ -52,6 +67,10 @@ if (place_meeting(x,y+vsp,oWall))
 	jump_current=jump_number
 	vsp=0;
 }
-}
 
+
+
+
+
+}
 

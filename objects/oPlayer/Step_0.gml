@@ -1,9 +1,12 @@
 // @description Insert description here
 // You can write your code in this editor
+
 CheckInput()
 CheckCollisionsx()
 CheckCollisiony()
 vsp=vsp+grv;
+
+
 
 if(state==states.idle){
 	StatePlayerIdel()
@@ -94,5 +97,33 @@ if(potion_timer=1)
 {
 	walksp=4
 }
+
+
+
+//rewind
+if (!rewind)
+{
+ds_list_add(td, [x,y]) // x position storage
+}
+
+if (ds_list_size(td) >60*max_seconds) {
+ds_list_delete(td,0)
+}
+
+
+var size=ds_list_size(td)
+
+if (rewind && size+td_rewind >0){
+td_rewind--;
+
+
+
+var arr = td[| size + td_rewind];
+   x = arr[0];
+   y = arr[1];
+}
+else if (!rewind)
+td_rewind=0;
+
 
 

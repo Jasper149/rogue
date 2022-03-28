@@ -8,19 +8,7 @@
 	vsp = jumpForce*2
 	PlayerHurt();
 }
-if (place_meeting(x+knockback_distance,y,oWall))
-{
-while(!place_meeting(x+knockback_distance,y,oWall))
-{
-	knockback=0
-}
- knockback=1
-}
- 
- if(place_meeting(x-sign(walksp),y,oEnemyFollow))and(knockback=0)
-x+=knockback_distance
-if(place_meeting(x+sign(walksp),y,oEnemyFollow))and(knockback=0)
-	x-=knockback_distance
+
 
 
 

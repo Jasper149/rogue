@@ -3,7 +3,7 @@
     "name": "sEnemy",
     "path": "sprites/sEnemy/sEnemy.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
