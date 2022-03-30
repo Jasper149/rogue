@@ -1,7 +1,7 @@
 function PlayerHurt()
 {
 	
-         if(!oPlayer.invic)
+         if(!global.rewind)
         {
         oPlayer.invic=true;
         oPlayer.hp --;

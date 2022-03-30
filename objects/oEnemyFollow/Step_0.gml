@@ -56,7 +56,7 @@ if (place_meeting(x+hsp,y,oPlayer))
 }
  y=y+vsp
   
-if (abs(oPlayer.x-x) <500)
+if (abs(oPlayer.x-x) <500) and (!global.rewind)
    { 
 	x=x+hsp
    }

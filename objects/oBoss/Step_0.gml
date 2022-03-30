@@ -50,14 +50,29 @@ y=y+vsp
 
  
 jump_timer-=1/room_speed
-if (abs(oPlayer.x-x) <500) and (jump_timer<=1) and (place_meeting(x,y+1,oWall))
+if (abs(oPlayer.x-x) <500) and (jump_timer<=1) and (place_meeting(x,y+1,oWall)) and (!global.rewind)
 
    { 
 	vsp=-8
 	jump_timer=2
   }
   
- if (abs(oPlayer.x-x) <500)
+ if (abs(oPlayer.x-x) <500) and (!global.rewind)
  {
 	 x=x+hsp
  }
+ 
+ 
+ if (global.rewind)
+{
+vsp=0
+ grv=0
+}
+ else
+ {
+ grv=0.12
+ }
+ 
+ 
+ 
+ 

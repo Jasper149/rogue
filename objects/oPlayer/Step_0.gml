@@ -61,29 +61,6 @@ room_goto(target)
 }
 
 
-//parry
-if (key_parry=1) 
-{
-	invic=true
-}
-
-if (key_melee=1)
-{
-instance_create_layer(x+move*100,y,"Instances", oMelee)
-}
-
-//timer
-if (invic = true)
-{
-	invTimer -= 1/room_speed
-	if (invTimer <=0)
-	{
-		invic = false;
-		invTimer = 1;
-	}
-}
-
-
 potion_timer-=1/room_speed
 if (key_potion) and oPlayer.hp<3 and (global.potion>0)
 {
@@ -101,7 +78,8 @@ if(potion_timer=1)
 
 
 //rewind
-if (!rewind)
+
+if (!global.rewind)
 {
 ds_list_add(td, [x,y]) // x position storage
 }
@@ -113,17 +91,25 @@ ds_list_delete(td,0)
 
 var size=ds_list_size(td)
 
-if (rewind && size+td_rewind >0){
+if (global.rewind && size+td_rewind >0){
 td_rewind--;
-
+rewindtimer=1
 
 
 var arr = td[| size + td_rewind];
    x = arr[0];
    y = arr[1];
 }
-else if (!rewind)
+else if (!global.rewind)
 td_rewind=0;
 
 
-
+if (global.rewind = true)
+{
+	rewindtimer -= 1/room_speed
+	if (rewindtimer <=0)
+	{
+		global.rewind = false;
+		rewindtimer = 1;
+	}
+}

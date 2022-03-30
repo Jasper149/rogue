@@ -17,8 +17,8 @@ timer=-1
 
 td=ds_list_create(); //list that stores data
 td_rewind=0; //how much to rewind
-max_seconds=3; //Max time you can rewind
-rewind=false //the activation
+max_seconds=1; //Max time you can rewind
+global.rewind=false //the activation
 rewindtimer=1
 
 

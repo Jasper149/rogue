@@ -3,7 +3,8 @@
 
 function CheckCollisionsx(){
 
-if (!rewind)
+
+if (!global.rewind)
 {
 move = key_right-key_left;
 
@@ -24,15 +25,6 @@ if (place_meeting(x+hsp,y,oWall))
 }
 
 //Enemy collision
-if (place_meeting(x+hsp,y,oEnemyFollow)) 
-{
-	while (!place_meeting(x+sign(hsp),y,oEnemyFollow)) 
-	{
-	x=x+sign(hsp);
-	}
-	rewind=true
-PlayerHurt()
-}
 
 
 
