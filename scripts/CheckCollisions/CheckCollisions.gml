@@ -1,4 +1,4 @@
-// Script assets have changed for v2.3.0 see
+                                                                                                                                                                                                                                                                                              // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 function CheckCollisionsx(){
@@ -19,10 +19,10 @@ if (place_meeting(x+hsp,y,oWall))
 	while (!place_meeting(x+sign(hsp),y,oWall)) 
 	{
 	x=x+sign(hsp);
-	}
-	hsp=0;
+	}                                          
+	hsp=0;               
 	hsp_sprint=0;
-}
+}                       
 
 //Enemy collision
 

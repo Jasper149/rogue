@@ -104,6 +104,7 @@ else if (!global.rewind)
 td_rewind=0;
 
 
+
 if (global.rewind = true)
 {
 	rewindtimer -= 1/room_speed
