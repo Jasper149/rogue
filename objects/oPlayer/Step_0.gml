@@ -93,7 +93,7 @@ var size=ds_list_size(td)
 
 if (global.rewind && size+td_rewind >0){
 td_rewind--;
-rewindtimer=1
+rewindtimer=0.5
 
 
 var arr = td[| size + td_rewind];
@@ -111,6 +111,6 @@ if (global.rewind = true)
 	if (rewindtimer <=0)
 	{
 		global.rewind = false;
-		rewindtimer = 1;
+		rewindtimer = 0.5;
 	}
 }

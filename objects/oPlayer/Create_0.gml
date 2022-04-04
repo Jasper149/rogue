@@ -19,7 +19,7 @@ td=ds_list_create(); //list that stores data
 td_rewind=0; //how much to rewind
 max_seconds=1; //Max time you can rewind
 global.rewind=false //the activation
-rewindtimer=1
+rewindtimer=2
 
 
 knockback_distance=0

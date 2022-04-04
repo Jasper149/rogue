@@ -54,7 +54,7 @@ if (abs(oPlayer.x-x) <500) and (jump_timer<=1) and (place_meeting(x,y+1,oWall)) 
 
    { 
 	vsp=-8
-	jump_timer=2
+	jump_timer=2 or jump_timer=4
   }
   
  if (abs(oPlayer.x-x) <500) and (!global.rewind)

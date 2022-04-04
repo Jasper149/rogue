@@ -23,12 +23,12 @@ if (place_meeting(x+hsp,y,oWall))
 	hsp=0;               
 	hsp_sprint=0;
 }                       
+    
 
-//Enemy collision
+  
 
 
-
-
+//sprint
 if (key_sprint=1)
 {
 hsp=hsp_sprint
@@ -60,8 +60,15 @@ if (place_meeting(x,y+vsp,oWall))
 	vsp=0;
 }
 
-
-
+//oPush collision
+if (place_meeting(x,y+vsp,oPush))
+{
+	while (!place_meeting(x,y+sign(vsp),oPush))
+	{
+	y=y+sign(vsp);
+	}
+	vsp=0;
+}
 
 
 }

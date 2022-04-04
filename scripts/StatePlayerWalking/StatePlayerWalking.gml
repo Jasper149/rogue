@@ -6,7 +6,7 @@ CheckCollisionsx()
 CheckCollisiony()
 CheckInput()
 
-
+ 
 
 if (place_meeting(x,y+1,oWall))
 {
