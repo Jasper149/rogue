@@ -14,15 +14,14 @@ shotTimer=0;
 jump_number=2
 jump_current=0
 timer=-1
+CheckInput()
 
 td=ds_list_create(); //list that stores data
 td_rewind=0; //how much to rewind
 max_seconds=1; //Max time you can rewind
-global.rewind=false //the activation
+rewind=false //the activation
 rewindtimer=2
 
-
-knockback_distance=0
 enum states {
 	walking,
 	sprinting,
@@ -33,3 +32,4 @@ enum states {
 
 state=states.idle
 
+stat=ds_list_create()

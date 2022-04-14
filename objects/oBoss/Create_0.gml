@@ -11,3 +11,6 @@ boss_invTimer=0.5
 grv=0.12
 jumpForce = -2;
 jump=true
+td=ds_list_create(); //list that stores data
+td_rewind=0; //how much to rewind
+max_seconds=1;

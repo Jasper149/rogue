@@ -1,15 +1,16 @@
 function PlayerHurt()
 {
 	
-         if(!global.rewind)
+        
+        if(!oPlayer.rewind)
         {
-        oPlayer.invic=true;
+		oPlayer.invic=true;
         oPlayer.hp --;
         if(oPlayer.hp<1)
        {
         PlayerDeath();
         }
-    }
+		}
 }
 function PlayerDeath()
 {

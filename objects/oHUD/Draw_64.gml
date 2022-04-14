@@ -3,4 +3,4 @@
 draw_text(32,32,"hp:" +string(oPlayer.hp));
 draw_text(32,64, "coins " +string(global.coins));
 draw_text(32,96, "potion " +string(global.potion));
-draw_text(32,120, "rewind " +string(global.rewind));
+draw_text(32,120, "state " +string(oPlayer.state));

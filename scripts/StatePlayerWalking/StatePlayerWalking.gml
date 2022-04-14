@@ -34,7 +34,7 @@ if (place_meeting(x,y+1,oWall))
 {
 state=states.jumping
 }
-if (hsp=8)
+if (hsp=8) or (hsp=-8)
 {
 state=states.sprinting
 }
@@ -42,5 +42,6 @@ if (key_potion)
 {
 state=states.potion
 }
+
 }
 

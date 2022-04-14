@@ -4,7 +4,7 @@
 function CheckCollisionsx(){
 
 
-if (!global.rewind)
+if (!oPlayer.rewind)
 {
 move = key_right-key_left;
 

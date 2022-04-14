@@ -56,9 +56,35 @@ if (place_meeting(x+hsp,y,oPlayer))
 }
  y=y+vsp
   
-if (abs(oPlayer.x-x) <500) and (!global.rewind)
+if (abs(oPlayer.x-x) <500) and (!oPlayer.rewind)
    { 
 	x=x+hsp
    }
 
- 
+ if (!oPlayer.rewind)
+{
+ds_list_add(td, [x,y]) // x position storage
+}
+
+if (ds_list_size(td) >60*max_seconds) {
+ds_list_delete(td,0)
+}
+
+
+var size=ds_list_size(td)
+
+if (oPlayer.rewind && size+td_rewind >0){
+td_rewind--;
+rewindtimer=0.5
+
+
+var arr = td[| size + td_rewind];
+   x = arr[0];
+   y = arr[1];
+}
+
+ else if (!oPlayer.rewind)
+td_rewind=0;
+
+
+

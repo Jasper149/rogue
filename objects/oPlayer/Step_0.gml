@@ -1,15 +1,12 @@
 // @description Insert description here
 // You can write your code in this editor
 
-CheckInput()
 CheckCollisionsx()
 CheckCollisiony()
 vsp=vsp+grv;
 
-
-
-if(state==states.idle){
-	StatePlayerIdel()
+if(state == states.idle){
+	StatePlayerIdle()
 }
 else if(state == states.walking){
 	StatePlayerWalking()
@@ -79,7 +76,7 @@ if(potion_timer=1)
 
 //rewind
 
-if (!global.rewind)
+if (!rewind)
 {
 ds_list_add(td, [x,y]) // x position storage
 }
@@ -91,7 +88,7 @@ ds_list_delete(td,0)
 
 var size=ds_list_size(td)
 
-if (global.rewind && size+td_rewind >0){
+if (rewind && size+td_rewind >0){
 td_rewind--;
 rewindtimer=0.5
 
@@ -100,17 +97,20 @@ var arr = td[| size + td_rewind];
    x = arr[0];
    y = arr[1];
 }
-else if (!global.rewind)
+else if (!rewind)
 td_rewind=0;
 
 
 
-if (global.rewind = true)
+if (rewind = true)
 {
 	rewindtimer -= 1/room_speed
 	if (rewindtimer <=0)
 	{
-		global.rewind = false;
-		rewindtimer = 0.5;
+		rewind = false;
+		rewindtimer = 1;
 	}
 }
+
+
+

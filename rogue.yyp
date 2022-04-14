@@ -1,8 +1,10 @@
 {
   "resources": [
+    {"id":{"name":"sPlayerWalking","path":"sprites/sPlayerWalking/sPlayerWalking.yy",},"order":10,},
     {"id":{"name":"sTurret","path":"sprites/sTurret/sTurret.yy",},"order":4,},
     {"id":{"name":"sProjectile","path":"sprites/sProjectile/sProjectile.yy",},"order":6,},
-    {"id":{"name":"StatePlayerIdel","path":"scripts/StatePlayerIdel/StatePlayerIdel.yy",},"order":7,},
+    {"id":{"name":"StatePlayerIdle","path":"scripts/StatePlayerIdle/StatePlayerIdle.yy",},"order":7,},
+    {"id":{"name":"sensor","path":"objects/sensor/sensor.yy",},"order":12,},
     {"id":{"name":"StatePlayerWalking","path":"scripts/StatePlayerWalking/StatePlayerWalking.yy",},"order":4,},
     {"id":{"name":"StatePlayerPotion","path":"scripts/StatePlayerPotion/StatePlayerPotion.yy",},"order":6,},
     {"id":{"name":"oBoss","path":"objects/oBoss/oBoss.yy",},"order":10,},
@@ -33,6 +35,7 @@
     {"id":{"name":"sMelee","path":"sprites/sMelee/sMelee.yy",},"order":8,},
     {"id":{"name":"sPush","path":"sprites/sPush/sPush.yy",},"order":9,},
     {"id":{"name":"R2","path":"rooms/R2/R2.yy",},"order":3,},
+    {"id":{"name":"Room6","path":"rooms/Room6/Room6.yy",},"order":6,},
     {"id":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"order":6,},
     {"id":{"name":"oMelee","path":"objects/oMelee/oMelee.yy",},"order":9,},
     {"id":{"name":"StateEnemyCollision","path":"scripts/StateEnemyCollision/StateEnemyCollision.yy",},"order":8,},
@@ -51,6 +54,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
     {"roomId":{"name":"R1","path":"rooms/R1/R1.yy",},},
     {"roomId":{"name":"R3","path":"rooms/R3/R3.yy",},},
     {"roomId":{"name":"R2","path":"rooms/R2/R2.yy",},},
