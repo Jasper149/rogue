@@ -9,6 +9,6 @@ key_potion=keyboard_check_pressed(ord("Q"))
 key_bullet=keyboard_check(ord("E"))
 key_lookup=keyboard_check(vk_up)
 key_parry=keyboard_check_pressed(vk_control)
-key_melee=keyboard_check_pressed(ord("R"))
+key_grab=keyboard_check(ord("F"))
 
 }
