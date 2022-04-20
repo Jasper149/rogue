@@ -4,13 +4,13 @@ vsp=vsp+grv
 
 CheckInput()
 
-if (place_meeting(x+hsp,y,oPlayer)) and (!place_meeting(x+oPlayer.hsp,y,oWall)) and (key_grab)
+if (place_meeting(x,y,oPlayer)) and (!place_meeting(x+oPlayer.hsp,y,oWall)) 
 {
 	x=x+oPlayer.hsp
 	
 }   
 
-if (place_meeting(x,y+vsp,oPush)) and (!place_meeting(x,y+oPush.hsp,oWall)) and (key_grab)
+if (place_meeting(x,y+vsp,oPush)) and (!place_meeting(x,y+oPush.hsp,oWall)) 
 {
 	x=x+oPush.hsp
 	

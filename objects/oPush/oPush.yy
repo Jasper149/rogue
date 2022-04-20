@@ -3,7 +3,7 @@
     "name": "sPush",
     "path": "sprites/sPush/sPush.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
