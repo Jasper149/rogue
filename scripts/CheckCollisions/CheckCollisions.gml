@@ -25,17 +25,6 @@ if (place_meeting(x+hsp,y,oWall))
 }                       
     
 
-  
-if (place_meeting(x+hsp,y,oPush)) 
-{
-	while (!place_meeting(x+sign(hsp),y,oPush)) 
-	{
-	x=x+sign(hsp);
-	}                                          
-	hsp=0;               
-	hsp_sprint=0;
-}     
-
 //sprint
 if (key_sprint=1)
 {
