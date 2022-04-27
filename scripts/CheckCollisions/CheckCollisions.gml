@@ -24,6 +24,15 @@ if (place_meeting(x+hsp,y,oWall))
 	hsp_sprint=0;
 }                       
     
+	if (place_meeting(x+hsp,y,oPush)) 
+{
+	while (!place_meeting(x+sign(hsp),y,oPush)) 
+	{
+	x=x+sign(hsp);
+	}                                          
+	hsp=0;               
+	hsp_sprint=0;
+}     
 
 //sprint
 if (key_sprint=1)
@@ -65,6 +74,7 @@ if (place_meeting(x,y+vsp,oPush))
 	y=y+sign(vsp);
 	}
 	vsp=0;
+	jump_current=jump_number;
 }
 
 

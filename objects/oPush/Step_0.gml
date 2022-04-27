@@ -4,26 +4,25 @@ vsp=vsp+grv
 
 CheckInput()
 
-if (place_meeting(x,y,oPlayer)) and (!place_meeting(x+oPlayer.hsp,y,oWall)) and (key_grab)
+if (!place_meeting(x+oPlayer.hsp,y,oWall)) and (key_grab) and (abs(oPlayer.x-x) <80) and (abs(oPlayer.y-y) <10)
 {
 	hsp=oPlayer.hsp
-	
-}   
-else if (place_meeting(x+oPlayer.hsp,y,oPlayer))
-{
-	oPlayer.hsp=0
-	
-}   
-else if (!place_meeting(x+oPlayer.hsp,y,oPlayer))
-{
-	hsp=0
+	vsp=oPlayer.vsp
 	
 }   
 
-if (place_meeting(x,y+vsp,oPush)) and (!place_meeting(x,y+oPush.hsp,oWall)) 
+if (!key_grab)
 {
-	x=x+oPush.hsp
-	
+	hsp=0
+}
+
+if (place_meeting(x+hsp,y,oPlayer)) 
+{
+	while (!place_meeting(x+sign(hsp),y,oPlayer)) 
+	{
+	x=x+sign(hsp);
+	}                                          
+	hsp=0;               
 }   
 
 
@@ -33,19 +32,8 @@ if (place_meeting(x,y+vsp,oWall))
 	{
 	y=y+sign(vsp);
 	}
-
 	vsp=0;
 }
-
-
-if (place_meeting(x+hsp,y,oWall)) 
-{
-	while (!place_meeting(x+sign(hsp),y,oWall)) 
-	{
-	x=x+sign(hsp);
-	}                                          
-	hsp=0;               
-}     
 
 if (place_meeting(x,y+vsp,oPush))
 {
@@ -53,18 +41,10 @@ if (place_meeting(x,y+vsp,oPush))
 	{
 	y=y+sign(vsp);
 	}
-	
 	vsp=0;
 }
 
-if (place_meeting(x+hsp,y,oPush)) 
-{
-	while (!place_meeting(x+sign(hsp),y,oPush)) 
-	{
-	x=x+sign(hsp);
-	}                                          
-	hsp=0;               
-}    
 
-y=y+vsp
+
 x=x+hsp
+y=y+vsp

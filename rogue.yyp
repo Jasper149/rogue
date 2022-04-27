@@ -37,6 +37,7 @@
     {"id":{"name":"sMelee","path":"sprites/sMelee/sMelee.yy",},"order":8,},
     {"id":{"name":"sPush","path":"sprites/sPush/sPush.yy",},"order":9,},
     {"id":{"name":"R2","path":"rooms/R2/R2.yy",},"order":2,},
+    {"id":{"name":"sPushConnected","path":"sprites/sPushConnected/sPushConnected.yy",},"order":12,},
     {"id":{"name":"R6","path":"rooms/R6/R6.yy",},"order":5,},
     {"id":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"order":6,},
     {"id":{"name":"oMelee","path":"objects/oMelee/oMelee.yy",},"order":9,},

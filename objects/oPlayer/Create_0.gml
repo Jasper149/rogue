@@ -33,3 +33,5 @@ enum states {
 state=states.idle
 
 stat=ds_list_create()
+
+grab_distance=0
