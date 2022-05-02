@@ -13,6 +13,7 @@ hsp=move*walksp
 	hsp_sprint=hsp*2
 }
 
+
 //horizontal collision
 if (place_meeting(x+hsp,y,oWall)) 
 {
@@ -46,6 +47,7 @@ else
 	
 }
 }
+
 function CheckCollisiony(){
 
 

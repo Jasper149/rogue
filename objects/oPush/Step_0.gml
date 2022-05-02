@@ -10,6 +10,11 @@ if (!place_meeting(x+oPlayer.hsp,y,oWall)) and (key_grab) and (abs(oPlayer.x-x) 
 	vsp=oPlayer.vsp
 	
 }   
+else 
+{
+	hsp=0
+}
+
 
 if (!key_grab)
 {
@@ -44,7 +49,23 @@ if (place_meeting(x,y+vsp,oPush))
 	vsp=0;
 }
 
+if (place_meeting(x+hsp,y,oWall)) 
+{
+	while (!place_meeting(x+sign(hsp),y,oWall)) 
+	{
+	x=x+sign(hsp);
+	}                                          
+	hsp=0;               
+}  
 
+if (place_meeting(x+hsp,y,oPush)) 
+{
+	while (!place_meeting(x+sign(hsp),y,oPush)) 
+	{
+	x=x+sign(hsp);
+	}                                          
+	hsp=0;               
+}  
 
 x=x+hsp
 y=y+vsp
