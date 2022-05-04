@@ -1,15 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 hsp =0;
+hp=3;
+global.potion=3;
 vsp =0;
 grv =0.17;
 walksp = 4;
 invic= false;
 invTimer = 1;
-oPlayer.hp=3;
 jumpForce = -2;
 potion_timer=2
-global.potion=3;
 shotTimer=0;
 jump_number=2
 jump_current=0
@@ -35,3 +35,5 @@ state=states.idle
 stat=ds_list_create()
 
 grab_distance=0
+
+room_transition=false
