@@ -18,6 +18,7 @@
     {"id":{"name":"R1","path":"rooms/R1/R1.yy",},"order":0,},
     {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"order":2,},
     {"id":{"name":"oPlayerProjectile","path":"objects/oPlayerProjectile/oPlayerProjectile.yy",},"order":8,},
+    {"id":{"name":"oControlMenu","path":"objects/oControlMenu/oControlMenu.yy",},"order":15,},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},"order":1,},
     {"id":{"name":"oCoin","path":"objects/oCoin/oCoin.yy",},"order":4,},
     {"id":{"name":"StatePlayerJumping","path":"scripts/StatePlayerJumping/StatePlayerJumping.yy",},"order":5,},
