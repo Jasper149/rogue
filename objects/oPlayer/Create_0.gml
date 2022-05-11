@@ -37,3 +37,4 @@ stat=ds_list_create()
 grab_distance=0
 
 room_transition=false
+
