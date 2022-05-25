@@ -21,8 +21,9 @@ if (place_meeting(x+hsp,y,oWall))
 	{
 	x=x+sign(hsp);
 	}                                          
-	hsp=0;               
+	hsp=0
 	hsp_sprint=0;
+	
 }                       
     
 	if (place_meeting(x+hsp,y,oPush)) 
@@ -34,7 +35,6 @@ if (place_meeting(x+hsp,y,oWall))
 	hsp=0;               
 	hsp_sprint=0;
 }     
-
 //sprint
 if (key_sprint=1)
 {
@@ -64,9 +64,10 @@ if (place_meeting(x,y+vsp,oWall))
 	{
 	y=y+sign(vsp);
 	}
-	jump_current=jump_number
 	vsp=0;
+	jump_current=jump_number
 }
+
 
 //oPush collision
 if (place_meeting(x,y+vsp,oPush))

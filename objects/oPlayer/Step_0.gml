@@ -54,7 +54,6 @@ if timer!=-1
 //room_transition
 if(y>=room_height)
 {
-room_transition=true
 target=asset_get_index("R"+string(irandom_range(1,5)));
 room_goto(target)
 }
